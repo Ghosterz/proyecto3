@@ -1,0 +1,33 @@
+<div class="contenedor">
+  <br /><br />
+  <div class="cTabla">
+    <table
+      class="tabla"
+      border="1"
+      cellspacing="0"
+      cellpadding="2"
+      bordercolor="666633"
+    >
+      <th>ID </th>
+      <th>Nombre Completo </th>
+      <th>Direccion </th>
+      <th>Ciudad </th>
+      <th>Estado </th>
+      <th>Distrito </th>
+      <th>Opciones </th>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente._id }}</td>
+        <td>{{ cliente.FirstName }} {{ cliente.LastName }}</td>
+        <td>{{ cliente.Address }}</td>
+        <td>{{ cliente.City }}</td>
+        <td>{{ cliente.Country }}</td>
+        <td>{{ cliente.District }}</td>
+        <td>
+          <button (click)="desactivar(cliente._id)" class="btnDelete">
+            <img src="../../../assets/trash-can_115312.ico" alt="" />
+          </button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

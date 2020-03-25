@@ -1,0 +1,39 @@
+<div class="form">
+  <h1>Registro del Cliente</h1>
+  <div class="input">
+    <span>Nombre:</span>
+    <input [(ngModel)]="nombre" type="text" />
+  </div>
+
+  <div class="input">
+    <span>Apellido:</span>
+    <input [(ngModel)]="apellido" type="text" />
+  </div>
+
+  <div class="input">
+    <span>Direccion:</span>
+    <input [(ngModel)]="direccion" type="text" />
+  </div>
+
+  <div class="input">
+    <span>Distrito:</span>
+    <input [(ngModel)]="distrito" type="text" />
+  </div>
+
+  <div class="input">
+    <span>Estado:</span>
+    <input [(ngModel)]="estado" type="text" />
+  </div>
+
+  <div class="input">
+    <span>Ciudad:</span>
+    <input [(ngModel)]="ciudad" type="text" />
+  </div>
+  <button
+    class="btn"
+    (click)="agregar(direccion, ciudad, estado, distrito, nombre, apellido)"
+    type="submit"
+  >
+    REGISTRAR
+  </button>
+</div>
