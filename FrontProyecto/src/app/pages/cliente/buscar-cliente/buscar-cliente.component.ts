@@ -16,7 +16,7 @@ export class BuscarClienteComponent implements OnInit {
         // Success
 
         this.clientes = data["cont"];
-        // console.log(this.clientes);
+        console.log(this.clientes);
       },
       error => {
         console.error(error);

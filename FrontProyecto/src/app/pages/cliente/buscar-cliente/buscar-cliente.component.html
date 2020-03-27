@@ -1,24 +1,33 @@
-<div class="contenedor">
-  <h1>Busqueda del cliente</h1>
-  <input [(ngModel)]="params" type="text" /><button (click)="buscar(params)">
-    Buscar
-  </button>
+<div class="container my-5 ">
+  <h1 class="my-4 p-0 mx-0">Busqueda del cliente</h1>
+  <div class="input-group mb-3">
+
+    <input type="text" [(ngModel)]="params" class="form-control" placeholder="" aria-label="Escribe algo en esta zona"
+      aria-describedby="button-addon1">
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-warning" (click)="buscar(params)" type="button" id="button-addon1">Buscar</button>
+      </div>
+  </div>
+
+
   <br /><br />
-  <div class="cTabla">
+
     <table
-      class="tabla"
-      border="1"
-      cellspacing="0"
-      cellpadding="2"
-      bordercolor="666633"
+      class="table"
     >
-      <th>ID </th>
-      <th>Nombre Completo </th>
-      <th>Direccion </th>
-      <th>Ciudad </th>
-      <th>Estado </th>
-      <th>Distrito </th>
-      <th>Opciones </th>
+
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre Completo</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Estado</th>
+            <th scope="col">Distrito</th>
+            <th scope="col">Opciones</th>
+          </tr>
+        </thead>
+
       <tr *ngFor="let cliente of clientes">
         <td>{{ cliente._id }}</td>
         <td>{{ cliente.FirstName }} {{ cliente.LastName }}</td>
@@ -33,5 +42,5 @@
         </td>
       </tr>
     </table>
-  </div>
+
 </div>

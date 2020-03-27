@@ -1,39 +1,51 @@
-<div class="form">
-  <h1>Registro del Cliente</h1>
-  <div class="input">
-    <span>Nombre:</span>
-    <input [(ngModel)]="nombre" type="text" />
-  </div>
+<div class="container my-5 ">
+  <div class="row">
+    <div class="col-6 offset-3">
 
-  <div class="input">
-    <span>Apellido:</span>
-    <input [(ngModel)]="apellido" type="text" />
-  </div>
+      <div class="form">
+        <h1>Registro del Cliente</h1>
 
-  <div class="input">
-    <span>Direccion:</span>
-    <input [(ngModel)]="direccion" type="text" />
-  </div>
 
-  <div class="input">
-    <span>Distrito:</span>
-    <input [(ngModel)]="distrito" type="text" />
-  </div>
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Nombre</label>
+          <input type="text" [(ngModel)]="nombre" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
 
-  <div class="input">
-    <span>Estado:</span>
-    <input [(ngModel)]="estado" type="text" />
-  </div>
 
-  <div class="input">
-    <span>Ciudad:</span>
-    <input [(ngModel)]="ciudad" type="text" />
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Apellido</label>
+          <input type="text" [(ngModel)]="apellido" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Direccion</label>
+          <input type="text" [(ngModel)]="direccion" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Distrito</label>
+          <input type="text" [(ngModel)]="distrito" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Estado</label>
+          <input type="text" [(ngModel)]="estado" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+
+        <div class="form-group">
+          <label for="exampleFormControlInput1">Ciudad</label>
+          <input type="text" [(ngModel)]="ciudad" class="form-control" id="exampleFormControlInput1" placeholder="">
+        </div>
+
+        <button class="btn btn-outline-success btn-block"
+          (click)="agregar(direccion, ciudad, estado, distrito, nombre, apellido)" type="submit">
+          REGISTRAR
+        </button>
+      </div>
+
+    </div>
   </div>
-  <button
-    class="btn"
-    (click)="agregar(direccion, ciudad, estado, distrito, nombre, apellido)"
-    type="submit"
-  >
-    REGISTRAR
-  </button>
 </div>

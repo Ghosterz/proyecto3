@@ -17,6 +17,7 @@ export class PropiedadComponent implements OnInit {
         // Success
 
         this.propiedades = data["cont"];
+        console.log(this.propiedades);
       },
       error => {
         console.error(error);
